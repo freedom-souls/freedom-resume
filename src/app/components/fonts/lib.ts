@@ -20,5 +20,6 @@ const getPreferredNonEnglishFontFamilies = () => {
 };
 
 export const getAllFontFamiliesToLoad = () => {
-  return [...ENGLISH_FONT_FAMILIES, ...getPreferredNonEnglishFontFamilies()];
+  // return [...ENGLISH_FONT_FAMILIES, ...getPreferredNonEnglishFontFamilies()];
+  return [...getPreferredNonEnglishFontFamilies()];
 };
