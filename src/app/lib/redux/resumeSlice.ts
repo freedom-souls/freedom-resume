@@ -10,6 +10,7 @@ import type {
   ResumeWorkExperience,
 } from "lib/redux/types";
 import type { ShowForm } from "lib/redux/settingsSlice";
+import { deepClone } from "lib/deep-clone";
 
 export const initialProfile: ResumeProfile = {
   name: "",
@@ -145,15 +146,15 @@ export const resumeSlice = createSlice({
       const { form } = action.payload;
       switch (form) {
         case "workExperiences": {
-          draft.workExperiences.push(structuredClone(initialWorkExperience));
+          draft.workExperiences.push(deepClone(initialWorkExperience));
           return draft;
         }
         case "educations": {
-          draft.educations.push(structuredClone(initialEducation));
+          draft.educations.push(deepClone(initialEducation));
           return draft;
         }
         case "projects": {
-          draft.projects.push(structuredClone(initialProject));
+          draft.projects.push(deepClone(initialProject));
           return draft;
         }
       }
