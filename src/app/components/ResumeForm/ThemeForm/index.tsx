@@ -86,14 +86,14 @@ export const ThemeForm = () => {
             handleSettingsChange={handleSettingsChange}
           />
         </div>
-        <div>
+        {/* <div>
           <InputGroupWrapper label="Document Size" />
           <DocumentSizeSelections
             themeColor={themeColor}
             selectedDocumentSize={documentSize}
             handleSettingsChange={handleSettingsChange}
           />
-        </div>
+        </div> */}
       </div>
     </BaseForm>
   );
