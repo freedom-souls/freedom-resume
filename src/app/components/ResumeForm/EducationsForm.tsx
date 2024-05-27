@@ -21,7 +21,7 @@ export const EducationsForm = () => {
   const showBulletPoints = useAppSelector(selectShowBulletPoints(form));
 
   return (
-    <Form form={form} addButtonText="Add School">
+    <Form form={form} addButtonText="添加教育经历">
       {educations.map(({ school, degree, gpa, date, descriptions }, idx) => {
         const handleEducationChange = (
           ...[
@@ -50,26 +50,26 @@ export const EducationsForm = () => {
             deleteButtonTooltipText="Delete school"
           >
             <Input
-              label="School"
-              labelClassName="col-span-4"
+              label="学校"
+              labelClassName="col-span-3"
               name="school"
-              placeholder="Cornell University"
+              placeholder="xx 大学 xx 学院"
               value={school}
               onChange={handleEducationChange}
             />
             <Input
-              label="Date"
-              labelClassName="col-span-2"
+              label="在读时间"
+              labelClassName="col-span-3"
               name="date"
-              placeholder="May 2018"
+              placeholder="2xxx年xx月 - 2xxx年xx月"
               value={date}
               onChange={handleEducationChange}
             />
             <Input
-              label="Degree & Major"
+              label="学位 & 专业"
               labelClassName="col-span-4"
               name="degree"
-              placeholder="Bachelor of Science in Computer Engineering"
+              placeholder=""
               value={degree}
               onChange={handleEducationChange}
             />
@@ -83,7 +83,7 @@ export const EducationsForm = () => {
             />
             <div className="relative col-span-full">
               <BulletListTextarea
-                label="Additional Information (Optional)"
+                label="在校经历等 (可选)"
                 labelClassName="col-span-full"
                 name="descriptions"
                 placeholder="Free paragraph space to list out additional activities, courses, awards etc"
@@ -91,7 +91,7 @@ export const EducationsForm = () => {
                 onChange={handleEducationChange}
                 showBulletPoints={showBulletPoints}
               />
-              <div className="absolute left-[15.6rem] top-[0.07rem]">
+              <div className="absolute left-[8.6rem] top-[0.07rem]">
                 <BulletListIconButton
                   showBulletPoints={showBulletPoints}
                   onClick={handleShowBulletPoints}

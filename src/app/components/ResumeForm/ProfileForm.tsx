@@ -17,34 +17,34 @@ export const ProfileForm = () => {
     <BaseForm>
       <div className="grid grid-cols-6 gap-3">
         <Input
-          label="Name"
+          label="姓名"
           labelClassName="col-span-full"
           name="name"
-          placeholder="Sal Khan"
+          placeholder="请输入姓名"
           value={name}
           onChange={handleProfileChange}
         />
-        <Textarea
-          label="Objective"
+        <Input
+          label="求职意向"
           labelClassName="col-span-full"
           name="summary"
-          placeholder="Entrepreneur and educator obsessed with making education free for anyone"
+          placeholder="请输入求职意向、职位"
           value={summary}
           onChange={handleProfileChange}
         />
         <Input
-          label="Email"
+          label="邮箱"
           labelClassName="col-span-4"
           name="email"
-          placeholder="hello@khanacademy.org"
+          placeholder="hello@qq.com"
           value={email}
           onChange={handleProfileChange}
         />
         <Input
-          label="Phone"
+          label="电话"
           labelClassName="col-span-2"
           name="phone"
-          placeholder="(123)456-7890"
+          placeholder="1xxxxxxxxxx"
           value={phone}
           onChange={handleProfileChange}
         />
@@ -57,10 +57,10 @@ export const ProfileForm = () => {
           onChange={handleProfileChange}
         />
         <Input
-          label="Location"
+          label="期望工作地"
           labelClassName="col-span-2"
           name="location"
-          placeholder="NYC, NY"
+          placeholder="北京、上海..."
           value={location}
           onChange={handleProfileChange}
         />

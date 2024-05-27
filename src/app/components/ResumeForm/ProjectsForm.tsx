@@ -14,7 +14,7 @@ export const ProjectsForm = () => {
   const showDelete = projects.length > 1;
 
   return (
-    <Form form="projects" addButtonText="Add Project">
+    <Form form="projects" addButtonText="添加项目经历">
       {projects.map(({ project, date, descriptions }, idx) => {
         const handleProjectChange = (
           ...[
@@ -39,23 +39,23 @@ export const ProjectsForm = () => {
           >
             <Input
               name="project"
-              label="Project Name"
-              placeholder="OpenResume"
+              label="项目名称"
+              placeholder="FreedomResume"
               value={project}
               onChange={handleProjectChange}
-              labelClassName="col-span-4"
+              labelClassName="col-span-3"
             />
             <Input
               name="date"
-              label="Date"
-              placeholder="Winter 2022"
+              label="时间"
+              placeholder="2xxx年xx月 - 2xxx年xx月"
               value={date}
               onChange={handleProjectChange}
-              labelClassName="col-span-2"
+              labelClassName="col-span-3"
             />
             <BulletListTextarea
               name="descriptions"
-              label="Description"
+              label="项目详情"
               placeholder="Bullet points"
               value={descriptions}
               onChange={handleProjectChange}

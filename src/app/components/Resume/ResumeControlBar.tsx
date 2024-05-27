@@ -5,7 +5,7 @@ import {
   MagnifyingGlassIcon,
   ArrowDownTrayIcon,
 } from "@heroicons/react/24/outline";
-import { usePDF } from "@react-pdf/renderer";
+import { usePDF, PDFDownloadLink } from "@react-pdf/renderer";
 import dynamic from "next/dynamic";
 
 const ResumeControlBar = ({
@@ -30,7 +30,7 @@ const ResumeControlBar = ({
 
   // Hook to update pdf when document changes
   useEffect(() => {
-    update();
+    update(document);
   }, [update, document]);
 
   return (
@@ -67,6 +67,9 @@ const ResumeControlBar = ({
         <ArrowDownTrayIcon className="h-4 w-4" />
         <span className="whitespace-nowrap">Download Resume</span>
       </a>
+      <PDFDownloadLink document={document} fileName={fileName}>
+        {({ blob, url, loading, error }) => (loading ? 'Loading document...' : 'Download now!')}
+      </PDFDownloadLink>
     </div>
   );
 };
